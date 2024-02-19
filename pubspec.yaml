@@ -28,9 +28,9 @@ dependencies:
   flutter_bloc: ^7.0.1
 
   # Firebase
-  firebase_core: ^1.4.0
-  firebase_auth: ^3.0.1
-  firebase_storage: ^10.0.1
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  firebase_storage: ^11.6.5
 
 
   # IOS Icons
@@ -50,9 +50,8 @@ dependencies:
 
   # Video player
   video_player: ^2.1.12
-  chewie: 
-    git:
-      url: git@github.com:v1nnk1/chewie.git
+  chewie: ^1.7.5
+  
 
 
   # Countdown timer
@@ -65,7 +64,7 @@ dependencies:
   flutter_local_notifications: ^8.0.0
 
   # Native timezone
-  flutter_native_timezone: ^2.0.0
+  flutter_timezone: ^1.0.8
 
   # Permission handler
   permission_handler: ^8.1.4+2
