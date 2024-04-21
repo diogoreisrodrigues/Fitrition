@@ -1,8 +1,8 @@
 class PathConstants {
   // Onboarding
-  static const String onboarding1 = 'assets/images/onboarding/onboarding.png';
-  static const String onboarding2 = 'assets/images/onboarding/onboarding_2.png';
-  static const String onboarding3 = 'assets/images/onboarding/onboarding_3.png';
+  static const String onboarding1 = 'assets/images/onboarding/fitrition.png';
+  static const String onboarding2 = 'assets/images/onboarding/exerciseCouple.png';
+  static const String onboarding3 = 'assets/images/onboarding/jayCuttler.png';
 
   // Auth
   static const String eye = 'assets/images/auth/eye_icon.png';
@@ -25,7 +25,7 @@ class PathConstants {
   static const String yogaWorkout = 'assets/images/workouts/yoga_workout.png';
   static const String back = 'assets/icons/workouts/back.png';
   static const String rectangle = 'assets/icons/workouts/rectangle.png';
-  static const String timeTracker = 'assets/icons/workouts/time.png';
+  static const String timeTracker = 'assets/icons/workouts/timeG.png';
   static const String exerciseTracker = 'assets/icons/workouts/exercise.png';
 
   static const String recicling = 'assets/images/exercises/recicling.png';
