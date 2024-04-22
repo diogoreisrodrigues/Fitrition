@@ -4,7 +4,7 @@ class ColorConstants {
   static const textColor = Color(0xff192126);
   static const primaryColor = Color(0xffbbf246);
 
-  static const textBlack = Color(0xFF1F2022);
+  static const textBlack = Color(0xff192126);
   static const white = Color(0xFFFFFFFF);
   static const grey = Color(0xFFB6BDC6);
   static const loadingBlack = Color(0x80000000);
