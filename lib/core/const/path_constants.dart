@@ -6,6 +6,7 @@ class PathConstants {
 
   // Auth
   static const String eye = 'assets/images/auth/eye_icon.png';
+  static const String salad = 'assets/icons/home/salada.png';
 
   // Tabbar
   static const String home = 'assets/icons/home/home_icon.png';
