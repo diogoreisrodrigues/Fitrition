@@ -37,7 +37,7 @@ class DataConstants {
           ExerciseData(
             title: TextConstants.reclining,
             minutes: TextConstants.recliningMinutes,
-            progress: 1,
+            progress: 0.5,
             video: PathConstants.recliningVideo,
             description: TextConstants.warriorDescription,
             steps: [
@@ -166,6 +166,40 @@ class DataConstants {
         ),
       ],
     ),
+    WorkoutData(
+      title: TextConstants.stretchingTitle,
+      exercices: TextConstants.stretchingExercises,
+      minutes: TextConstants.stretchingMinutes,
+      currentProgress: 0,
+      progress: 8,
+      image: PathConstants.stretching,
+      exerciseDataList: [
+        ExerciseData(
+          title: TextConstants.reclining,
+          minutes: TextConstants.recliningMinutes,
+          progress: 0.0,
+          video: PathConstants.recliningVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+        ExerciseData(
+          title: TextConstants.cowPose,
+          minutes: TextConstants.cowPoseMinutes,
+          progress: 0.0,
+          video: PathConstants.cowPoseVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+        ExerciseData(
+          title: TextConstants.warriorPose,
+          minutes: TextConstants.warriorPoseMinutes,
+          progress: 0.0,
+          video: PathConstants.warriorIIVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+      ],
+    )
   ];
 
   static final List<WorkoutData> homeWorkouts = [
@@ -242,6 +276,184 @@ class DataConstants {
             steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
           ),
         ]),
+  ];
+
+  // Receitas
+  static final List<WorkoutData> recipes = [
+    WorkoutData(
+        title: TextConstants.Breakfast,
+        exercices: TextConstants.Breakfast1,
+        minutes: TextConstants.Breakfast2,
+        currentProgress: 10,
+        progress: 16,
+        image: PathConstants.yoga,
+        exerciseDataList: [
+          ExerciseData(
+            title: TextConstants.reclining,
+            minutes: TextConstants.recliningMinutes,
+            progress: 0.5,
+            video: PathConstants.recliningVideo,
+            description: TextConstants.warriorDescription,
+            steps: [
+              TextConstants.warriorStep1,
+              TextConstants.warriorStep2,
+              TextConstants.warriorStep1,
+              TextConstants.warriorStep2,
+              TextConstants.warriorStep1,
+              TextConstants.warriorStep2,
+            ],
+          ),
+          ExerciseData(
+            title: TextConstants.cowPose,
+            minutes: TextConstants.cowPoseMinutes,
+            progress: 0.3,
+            video: PathConstants.cowPoseVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.warriorPose,
+            minutes: TextConstants.warriorPoseMinutes,
+            progress: 0.99,
+            video: PathConstants.warriorIIVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+        ]),
+    WorkoutData(
+        title: TextConstants.Lunch,
+        exercices: TextConstants.Lunch1,
+        minutes: TextConstants.Lunch2,
+        currentProgress: 1,
+        progress: 20,
+        image: PathConstants.pilates,
+        exerciseDataList: [
+          ExerciseData(
+            title: TextConstants.reclining,
+            minutes: TextConstants.recliningMinutes,
+            progress: 0.1,
+            video: PathConstants.recliningVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.cowPose,
+            minutes: TextConstants.cowPoseMinutes,
+            progress: 0.1,
+            video: PathConstants.cowPoseVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.warriorPose,
+            minutes: TextConstants.warriorPoseMinutes,
+            progress: 0.0,
+            video: PathConstants.warriorIIVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+        ]),
+    WorkoutData(
+        title: TextConstants.Snacks,
+        exercices: TextConstants.Snacks1,
+        minutes: TextConstants.Snacks2,
+        currentProgress: 12,
+        progress: 14,
+        image: PathConstants.fullBody,
+        exerciseDataList: [
+          ExerciseData(
+            title: TextConstants.reclining,
+            minutes: TextConstants.recliningMinutes,
+            progress: 0.99,
+            video: PathConstants.recliningVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.cowPose,
+            minutes: TextConstants.cowPoseMinutes,
+            progress: 0.6,
+            video: PathConstants.cowPoseVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.warriorPose,
+            minutes: TextConstants.warriorPoseMinutes,
+            progress: 0.8,
+            video: PathConstants.warriorIIVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+        ]),
+    WorkoutData(
+      title: TextConstants.Dinner,
+      exercices: TextConstants.Dinner1,
+      minutes: TextConstants.Dinner2,
+      currentProgress: 0,
+      progress: 8,
+      image: PathConstants.stretching,
+      exerciseDataList: [
+        ExerciseData(
+          title: TextConstants.reclining,
+          minutes: TextConstants.recliningMinutes,
+          progress: 0.0,
+          video: PathConstants.recliningVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+        ExerciseData(
+          title: TextConstants.cowPose,
+          minutes: TextConstants.cowPoseMinutes,
+          progress: 0.0,
+          video: PathConstants.cowPoseVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+        ExerciseData(
+          title: TextConstants.warriorPose,
+          minutes: TextConstants.warriorPoseMinutes,
+          progress: 0.0,
+          video: PathConstants.warriorIIVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+      ],
+    ),
+    WorkoutData(
+      title: TextConstants.Desserts,
+      exercices: TextConstants.Desserts1,
+      minutes: TextConstants.Desserts2,
+      currentProgress: 0,
+      progress: 8,
+      image: PathConstants.stretching,
+      exerciseDataList: [
+        ExerciseData(
+          title: TextConstants.reclining,
+          minutes: TextConstants.recliningMinutes,
+          progress: 0.0,
+          video: PathConstants.recliningVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+        ExerciseData(
+          title: TextConstants.cowPose,
+          minutes: TextConstants.cowPoseMinutes,
+          progress: 0.0,
+          video: PathConstants.cowPoseVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+        ExerciseData(
+          title: TextConstants.warriorPose,
+          minutes: TextConstants.warriorPoseMinutes,
+          progress: 0.0,
+          video: PathConstants.warriorIIVideo,
+          description: TextConstants.warriorDescription,
+          steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+        ),
+      ],
+    )
   ];
 
   // Reminder

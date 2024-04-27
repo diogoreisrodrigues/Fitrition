@@ -3,6 +3,7 @@ import 'package:fitness_flutter/core/const/path_constants.dart';
 import 'package:fitness_flutter/core/const/text_constants.dart';
 import 'package:fitness_flutter/screens/home/page/home_page.dart';
 import 'package:fitness_flutter/screens/Nutrition/Nutrition_page.dart';
+import 'package:fitness_flutter/screens/Nutrition/nutrition_w_page.dart';
 import 'package:fitness_flutter/screens/settings/settings_screen.dart';
 import 'package:fitness_flutter/screens/tab_bar/bloc/tab_bar_bloc.dart';
 import 'package:fitness_flutter/screens/workouts/page/workouts_page.dart';
@@ -38,7 +39,7 @@ class TabBarPage extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.03), // Adiciona padding nas laterais
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(20), // Arredonda os cantos
+          borderRadius: BorderRadius.circular(50), // Arredonda os cantos
           child: BottomNavigationBar(
             currentIndex: bloc.currentIndex,
             fixedColor: ColorConstants.primaryColor,
@@ -89,7 +90,7 @@ class TabBarPage extends StatelessWidget {
     final children = [
       HomePage(),
       WorkoutsPage(),
-      NutritionPage(),
+      NutritionWPage(),
       SettingsScreen()
       // Scaffold(
       //   body: Center(

@@ -22,8 +22,8 @@ class WorkoutCard extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          stops: [0.0, 0.25, 1.0], // Adiciona mais pontos de parada
-          colors: [Colors.white, Colors.white, Colors.grey],
+          stops: [0.0, 0.60, 1.0], // Adiciona mais pontos de parada
+          colors: [Colors.grey, Colors.white, Colors.white],
         ),
         boxShadow: [BoxShadow(color: ColorConstants.textBlack.withOpacity(0.12), blurRadius: 5.0, spreadRadius: 1.1)],
       ),
@@ -44,13 +44,18 @@ class WorkoutCard extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
+                    Expanded(child: ClipRRect(borderRadius: BorderRadius.circular(15), child: Image.asset(workout.image, fit: BoxFit.fill))),
+                    SizedBox(width: 60),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          Padding(
+                            padding: EdgeInsets.only(top: 15.0), // Defina o valor da margem superior como desejar
+                            child: Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                          ),
                           const SizedBox(height: 3),
-                          Text(workout.exercices + " " + TextConstants.exercisesUppercase,
+                          Text(workout.exercices + " " + TextConstants.recipeUppercase,
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.grey),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2),
@@ -59,24 +64,9 @@ class WorkoutCard extends StatelessWidget {
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.grey),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2),
-                          Spacer(),
-                          Text('${workout.currentProgress}/${workout.progress}', style: TextStyle(fontSize: 10)),
-                          SizedBox(height: 3),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 30.0, left: 2),
-                            child: LinearPercentIndicator(
-                              percent: workout.currentProgress / workout.progress,
-                              progressColor: ColorConstants.primaryColor,
-                              backgroundColor: ColorConstants.primaryColor.withOpacity(0.2),
-                              lineHeight: 6,
-                              padding: EdgeInsets.zero,
-                            ),
-                          )
                         ],
                       ),
                     ),
-                    SizedBox(width: 60),
-                    Expanded(child: ClipRRect(borderRadius: BorderRadius.circular(15), child: Image.asset(workout.image, fit: BoxFit.fill))),
                   ],
                 ),
               ),

@@ -92,6 +92,35 @@ class TextConstants {
   static const String stretchingExercises = "8";
   static const String stretchingMinutes = "35";
 
+  //-----------------------------------------
+
+  //Recipes screen -> stretching card
+  static const String Breakfast = "Breakfast";
+  static const String Breakfast1 = "8";
+  static const String Breakfast2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Lunch = "Lunch";
+  static const String Lunch1 = "8";
+  static const String Lunch2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Dinner = "Dinner";
+  static const String Dinner1 = "8";
+  static const String Dinner2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Snacks = "Snacks";
+  static const String Snacks1 = "8";
+  static const String Snacks2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Desserts = "Desserts";
+  static const String Desserts1 = "8";
+  static const String Desserts2 = "1-2";
+
+  //-----------------------------------------
+
   //Settings screen
   static const String joinUs = 'Join us in social media';
   static const String calendar = "Calendar";
@@ -166,4 +195,10 @@ class TextConstants {
   static const passwordReset = 'Password Reset';
   static const sendActivationBuild = 'Send Activation Link';
   static const resetPasswordLinkWasSent = 'Reset password link was sent on your email.';
+
+  //-----------------------------------------
+  // Nutrition Details screen common
+  static const String recipe = "Recipes";
+  static const String recipeLowercase = "recipes";
+  static const String recipeUppercase = "Recipes";
 }

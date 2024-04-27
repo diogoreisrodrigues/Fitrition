@@ -97,7 +97,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 },
               ),
             SettingsContainer(
-                onTap: () => launch('https://perpet.io/'), child: Text(TextConstants.terms, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500))),
+                onTap: () => launch('https://www.google.com/search?q=mary+barreto+universidade+da+madeira&sourceid=chrome&ie=UTF-8'), child: Text(TextConstants.terms, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500))),
             SettingsContainer(
                 child: Text(TextConstants.signOut, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
                 onTap: () {
@@ -114,15 +114,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                    onPressed: () => launch('https://www.facebook.com/perpetio/'),
+                    onPressed: () => launch('https://www.facebook.com/escondidinhogym/'),
                     style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: Colors.white, elevation: 1),
                     child: Image.asset(PathConstants.facebook)),
                 TextButton(
-                    onPressed: () => launch('https://www.instagram.com/perpetio/'),
+                    onPressed: () => launch('https://www.instagram.com/davidfitness.pt/'),
                     style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: Colors.white, elevation: 1),
                     child: Image.asset(PathConstants.instagram)),
                 TextButton(
-                    onPressed: () => launch('https://twitter.com/perpetio'),
+                    onPressed: () => launch('https://twitter.com/davidfitness_pt'),
                     style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: Colors.white, elevation: 1),
                     child: Image.asset(PathConstants.twitter)),
               ],

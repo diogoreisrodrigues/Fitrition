@@ -22,7 +22,7 @@ class StartWorkoutContent extends StatelessWidget {
     return Container(
       height: double.infinity,
       width: double.infinity,
-      color: ColorConstants.white,
+      color: Color.fromRGBO(25, 33, 38, 1),
       child: SafeArea(
         child: _createDetailedExercise(context),
       ),
@@ -99,11 +99,11 @@ class StartWorkoutContent extends StatelessWidget {
   }
 
   Widget _createTitle() {
-    return Text(exercise.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold));
+    return Text(exercise.title, style: TextStyle(fontSize: 24, color: Color.fromRGBO(255, 255, 255, 1), fontWeight: FontWeight.bold));
   }
 
   Widget _createDescription() {
-    return Text(exercise.description, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500));
+    return Text(exercise.description, style: TextStyle(fontSize: 14, color: Color.fromRGBO(255, 255, 255, 0.5), fontWeight: FontWeight.w500));
   }
 
   Widget _createSteps() {
@@ -119,52 +119,58 @@ class StartWorkoutContent extends StatelessWidget {
 
   Widget _createTimeTracker(BuildContext context) {
     // final bloc = BlocProvider.of<StartWorkoutBloc>(context);
-    return Container(
-      width: double.infinity,
-      color: ColorConstants.white,
-      child: Column(
-        children: [
-          nextExercise != null
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      TextConstants.nextExercise,
-                      style: TextStyle(
-                        color: ColorConstants.grey,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(width: 5),
-                    Text(
-                      nextExercise?.title ?? "",
-                      style: TextStyle(
-                        color: ColorConstants.textBlack,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(width: 6.5),
-                    Icon(Icons.access_time, size: 20),
-                    const SizedBox(width: 6.5),
-                    Text('00:${nextExercise!.minutes > 10 ? nextExercise!.minutes : '0${nextExercise!.minutes}'}')
-                    // BlocBuilder<StartWorkoutBloc, StartWorkoutState>(
-                    //   buildWhen: (_, currState) => currState is PlayTimerState || currState is PauseTimerState,
-                    //   builder: (context, state) {
-                    //     return StartWorkoutTimer(
-                    //       time: bloc.time,
-                    //       isPaused: !(state is PlayTimerState),
-                    //     );
-                    //   },
-                    // ),
-                  ],
-                )
-              : SizedBox.shrink(),
-          const SizedBox(height: 18),
-          _createButton(context),
-        ],
-      ),
+    return Padding(
+        padding: const EdgeInsets.only(top: 10.0), // Adicione a margem que deseja aqui
+        child: Container(
+          width: double.infinity,
+          color: Color.fromRGBO(25, 33, 38, 1),
+          child: Column(
+            children: [
+              nextExercise != null
+                  ? Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          TextConstants.nextExercise,
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          nextExercise?.title ?? "",
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.5),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(width: 6.5),
+                        Icon(Icons.access_time, size: 20, color: Colors.white),
+                        const SizedBox(width: 6.5),
+                        Text(
+                          '00:${nextExercise!.minutes > 10 ? nextExercise!.minutes : '0${nextExercise!.minutes}'}',
+                          style: TextStyle(color: Color.fromRGBO(255, 255, 255, 0.5), fontSize: 15),
+                        )
+                        // BlocBuilder<StartWorkoutBloc, StartWorkoutState>(
+                        //   buildWhen: (_, currState) => currState is PlayTimerState || currState is PauseTimerState,
+                        //   builder: (context, state) {
+                        //     return StartWorkoutTimer(
+                        //       time: bloc.time,
+                        //       isPaused: !(state is PlayTimerState),
+                        //     );
+                        //   },
+                        // ),
+                      ],
+                    )
+                  : SizedBox.shrink(),
+              const SizedBox(height: 18),
+              _createButton(context),
+            ],
+          ),
+        ),
     );
   }
 
@@ -215,7 +221,14 @@ class Step extends StatelessWidget {
           child: Center(child: Text(number, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: ColorConstants.primaryColor))),
         ),
         const SizedBox(width: 10),
-        Expanded(child: Text(description)),
+        Expanded(
+          child: Text(
+            description,
+            style: TextStyle(
+                color: Color.fromRGBO(255, 255, 255, 0.5), // Alterado para branco
+            ),
+          ),
+        ),
       ],
     );
   }
