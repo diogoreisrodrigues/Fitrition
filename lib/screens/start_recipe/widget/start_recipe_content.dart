@@ -11,11 +11,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class StartWorkoutContent extends StatelessWidget {
+class Ingredient {
+  final String image;
+  final String name;
+  final String many;
+
+  Ingredient({required this.image, required this.name, required this.many});
+}
+
+class StartRecipetContent extends StatelessWidget {
   final ExerciseData exercise;
   final ExerciseData? nextExercise;
 
-  StartWorkoutContent({required this.exercise, required this.nextExercise});
+
+
+  List<Ingredient> ingredients = [
+    Ingredient(image: 'assets/icons/home/logoB.png', name: 'milho', many: '2 gr'),
+    Ingredient(image: 'assets/icons/home/logoF.png', name: 'azeite', many: '100 ml'),
+    Ingredient(image: 'assets/icons/home/logoB.png', name: 'milho', many: '2 gr'),
+    Ingredient(image: 'assets/icons/home/logoF.png', name: 'azeite', many: '100 ml'),
+  ];
+
+  StartRecipetContent({required this.exercise, required this.nextExercise});
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +61,15 @@ class StartWorkoutContent extends StatelessWidget {
               _createTitle(),
               const SizedBox(height: 9),
               _createDescription(),
+              const SizedBox(height: 9),
+              _createIngredients(),
               const SizedBox(height: 30),
+              _createPassoApasso(),
+              const SizedBox(height: 9),
               _createSteps(),
             ]),
           ),
-          _createTimeTracker(context),
+          //_createTimeTracker(context),
         ],
       ),
     );
@@ -80,10 +101,94 @@ class StartWorkoutContent extends StatelessWidget {
     );
   }
 
+  Column _createIngredients() {
+    int num = ingredients.length;
+    String numItens = num.toString() + ' itens';
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Ingredients',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
+            Text(
+              numItens,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 15,),
+        Container(
+          height: 145,
+          child: ListView.separated(
+              itemCount: ingredients.length,
+              scrollDirection: Axis.horizontal,
+              separatorBuilder: (context, index) => SizedBox(width: 15,),
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                              image: AssetImage(ingredients[index].image),
+                          )
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Container(
+                      //alignment: Alignment.centerLeft,
+                      width: 90,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            ingredients[index].name,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize:14
+                            ),
+                          ),
+                          Text(
+                            ingredients[index].many,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey,
+                                fontSize:14
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                );
+              }
+          ),
+        ),
+      ],
+    );
+  }
+
+
   Widget _createVideo(BuildContext context) {
     final bloc = BlocProvider.of<StartWorkoutBloc>(context);
     return Container(
-      height: 264,
+      height: 235,
       width: double.infinity,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: ColorConstants.white),
       child: StartWorkoutVideo(
@@ -106,6 +211,25 @@ class StartWorkoutContent extends StatelessWidget {
     return Text(exercise.description, style: TextStyle(fontSize: 14, color: Color.fromRGBO(255, 255, 255, 0.5), fontWeight: FontWeight.w500));
   }
 
+  Widget _createPassoApasso() {
+    int num = exercise.steps.length;
+    String numItens = num.toString() + ' steps';
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          "Step by Step",
+          style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        Text(
+          numItens,
+          style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ],
+    );
+  }
+
   Widget _createSteps() {
     return Column(
       children: [
@@ -120,7 +244,7 @@ class StartWorkoutContent extends StatelessWidget {
   Widget _createTimeTracker(BuildContext context) {
     // final bloc = BlocProvider.of<StartWorkoutBloc>(context);
     return Padding(
-        padding: const EdgeInsets.only(top: 10.0), // Adicione a margem que deseja aqui
+        padding: const EdgeInsets.only(top: 0.0), // Adicione a margem que deseja aqui
         child: Container(
           width: double.infinity,
           color: Color.fromRGBO(25, 33, 38, 1),

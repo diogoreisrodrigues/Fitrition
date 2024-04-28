@@ -7,22 +7,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class ExercisesList extends StatelessWidget {
-  final WorkoutData workout;
-  final List<ExerciseData> exercises;
+class RecipesList extends StatelessWidget {
+  final WorkoutData recipe;
+  final List<ExerciseData> receitas;
 
-  const ExercisesList({required this.exercises, required this.workout});
+  const RecipesList({required this.receitas, required this.recipe});
 
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       padding: EdgeInsets.only(top: 10),
-      itemCount: exercises.length,
+      itemCount: receitas.length,
       itemBuilder: (context, index) {
         return ExerciseCell(
-          currentExercise: exercises[index],
-          nextExercise: index == exercises.length - 1 ? null : exercises[index + 1],
-          workout: workout,
+          currentExercise: receitas[index],
+          nextExercise: index == receitas.length - 1 ? null : receitas[index + 1],
+          workout: recipe,
         );
       },
       separatorBuilder: (context, index) {
@@ -110,27 +110,29 @@ class ExerciseCell extends StatelessWidget {
 
   Widget _createExerciseTextInfo() {
     final minutesStr = "${currentExercise.minutes} minutes";
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          currentExercise.title,
-          style: TextStyle(
-            color: ColorConstants.white,
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
+    return Padding(
+      padding: EdgeInsets.only(left: 10, top: 10), // Adicione os valores de padding desejados aqui
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            currentExercise.title,
+            style: TextStyle(
+              color: ColorConstants.white,
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+            ),
           ),
-        ),
-        Text(
-          minutesStr,
-          style: TextStyle(
-            color: Color.fromRGBO(255, 255, 255, 0.5),
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
+          Text(
+            minutesStr,
+            style: TextStyle(
+              color: Color.fromRGBO(255, 255, 255, 0.5),
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
           ),
-        ),
-        const SizedBox(height: 11),
-        Padding(
+          const SizedBox(height: 11),
+          /*Padding(
           padding: const EdgeInsets.only(right: 20),
           child: LinearPercentIndicator(
             percent: currentExercise.progress,
@@ -139,8 +141,9 @@ class ExerciseCell extends StatelessWidget {
             lineHeight: 6,
             padding: EdgeInsets.zero,
           ),
-        ),
-      ],
+        ),*/
+        ],
+      ),
     );
   }
 

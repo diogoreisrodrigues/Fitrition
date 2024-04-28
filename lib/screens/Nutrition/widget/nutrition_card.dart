@@ -7,8 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class WorkoutCard extends StatelessWidget {
-  final WorkoutData workout;
-  WorkoutCard({Key? key, required this.workout}) : super(key: key);
+  final WorkoutData recipes;
+  WorkoutCard({Key? key, required this.recipes}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class WorkoutCard extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          stops: [0.0, 0.60, 1.0], // Adiciona mais pontos de parada
+          stops: [0.0, 0.6, 1.0], // Adiciona mais pontos de parada
           colors: [Colors.grey, Colors.white, Colors.white],
         ),
         boxShadow: [BoxShadow(color: ColorConstants.textBlack.withOpacity(0.12), blurRadius: 5.0, spreadRadius: 1.1)],
@@ -35,7 +35,7 @@ class WorkoutCard extends StatelessWidget {
             return InkWell(
               borderRadius: BorderRadius.circular(10),
               onTap: () {
-                bloc.add(CardTappedEvent(workout: workout));
+                bloc.add(CardTappedEvent(workout: recipes));
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
@@ -44,7 +44,7 @@ class WorkoutCard extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: ClipRRect(borderRadius: BorderRadius.circular(15), child: Image.asset(workout.image, fit: BoxFit.fill))),
+                    Expanded(child: ClipRRect(borderRadius: BorderRadius.circular(15), child: Image.asset(recipes.image, fit: BoxFit.fill))),
                     SizedBox(width: 60),
                     Expanded(
                       child: Column(
@@ -52,15 +52,15 @@ class WorkoutCard extends StatelessWidget {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(top: 15.0), // Defina o valor da margem superior como desejar
-                            child: Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                            child: Text(recipes.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
                           ),
                           const SizedBox(height: 3),
-                          Text(workout.exercices + " " + TextConstants.recipeUppercase,
+                          Text(recipes.exercices + " " + TextConstants.recipeUppercase,
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.grey),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2),
                           const SizedBox(height: 3),
-                          Text(workout.minutes + " " + TextConstants.minutes,
+                          Text(recipes.minutes + " " + TextConstants.minutes,
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.grey),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2),

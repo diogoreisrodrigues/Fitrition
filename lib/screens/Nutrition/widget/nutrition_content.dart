@@ -46,7 +46,7 @@ class NutritionContent extends StatelessWidget {
   Widget _createWorkoutCard(WorkoutData workoutData) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
-      child: WorkoutCard(workout: workoutData),
+      child: WorkoutCard(recipes: workoutData),
     );
   }
 }
