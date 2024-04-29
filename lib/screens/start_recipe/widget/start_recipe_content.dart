@@ -102,8 +102,12 @@ class StartRecipetContent extends StatelessWidget {
   }
 
   Column _createIngredients() {
-    int num = ingredients.length;
+    int num = exercise.name.length;
+
+
+
     String numItens = num.toString() + ' itens';
+
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -133,7 +137,7 @@ class StartRecipetContent extends StatelessWidget {
         Container(
           height: 145,
           child: ListView.separated(
-              itemCount: ingredients.length,
+              itemCount: num,
               scrollDirection: Axis.horizontal,
               separatorBuilder: (context, index) => SizedBox(width: 15,),
               itemBuilder: (context, index) {
@@ -145,7 +149,7 @@ class StartRecipetContent extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                              image: AssetImage(ingredients[index].image),
+                              image: AssetImage(exercise.imagePath[index]),
                           )
                       ),
                     ),
@@ -157,7 +161,7 @@ class StartRecipetContent extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            ingredients[index].name,
+                            exercise.name[index],
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -165,7 +169,7 @@ class StartRecipetContent extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            ingredients[index].many,
+                            exercise.amount[index],
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 color: Colors.grey,
