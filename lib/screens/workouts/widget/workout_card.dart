@@ -19,12 +19,13 @@ class WorkoutCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        gradient: LinearGradient(
+        color: Color.fromRGBO(25, 33, 38, 1),
+        /*gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          stops: [0.0, 0.25, 1.0], // Adiciona mais pontos de parada
-          colors: [Colors.white, Colors.white, Colors.grey],
-        ),
+          //stops: [0.0, 0.25, 1.0], // Adiciona mais pontos de parada
+          colors: [Color.fromRGBO(25, 33, 38, 1),Color.fromRGBO(25, 33, 38, 0.8)],
+        ),*/
         boxShadow: [BoxShadow(color: ColorConstants.textBlack.withOpacity(0.12), blurRadius: 5.0, spreadRadius: 1.1)],
       ),
       child: Material(
@@ -48,7 +49,7 @@ class WorkoutCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                          Text(workout.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: ColorConstants.white)),
                           const SizedBox(height: 3),
                           Text(workout.exercices + " " + TextConstants.exercisesUppercase,
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: ColorConstants.grey),
@@ -60,7 +61,7 @@ class WorkoutCard extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2),
                           Spacer(),
-                          Text('${workout.currentProgress}/${workout.progress}', style: TextStyle(fontSize: 10)),
+                          Text('${workout.currentProgress}/${workout.progress}', style: TextStyle(fontSize: 12, color: ColorConstants.grey)),
                           SizedBox(height: 3),
                           Padding(
                             padding: const EdgeInsets.only(right: 30.0, left: 2),

@@ -45,7 +45,7 @@ class TabBarPage extends StatelessWidget {
             fixedColor: ColorConstants.primaryColor,
             items: [
               BottomNavigationBarItem(
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromRGBO(25, 33, 38, 1),
                 icon: Image(
                   image: AssetImage(PathConstants.home),
                   color: bloc.currentIndex == 0 ? ColorConstants.primaryColor : null,
@@ -53,7 +53,7 @@ class TabBarPage extends StatelessWidget {
                 label: TextConstants.homeIcon,
               ),
               BottomNavigationBarItem(
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromRGBO(25, 33, 38, 1),
                 icon: Image(
                   image: AssetImage(PathConstants.workouts),
                   color: bloc.currentIndex == 1 ? ColorConstants.primaryColor : null,
@@ -61,7 +61,7 @@ class TabBarPage extends StatelessWidget {
                 label: TextConstants.workoutsIcon,
               ),
               BottomNavigationBarItem(
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromRGBO(25, 33, 38, 1),
                 icon: Image(
                   image: AssetImage(PathConstants.salad),
                   color: bloc.currentIndex == 2 ? ColorConstants.primaryColor : ColorConstants.white,
@@ -69,7 +69,7 @@ class TabBarPage extends StatelessWidget {
                 label: TextConstants.NutritionIcon,
               ),
               BottomNavigationBarItem(
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromRGBO(25, 33, 38, 1),
                 icon: Image(
                   image: AssetImage(PathConstants.settings),
                   color: bloc.currentIndex == 3 ? ColorConstants.primaryColor : null,

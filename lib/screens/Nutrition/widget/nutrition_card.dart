@@ -19,12 +19,13 @@ class WorkoutCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        gradient: LinearGradient(
+        color: Color.fromRGBO(25, 33, 38, 1),
+        /*gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          stops: [0.0, 0.6, 1.0], // Adiciona mais pontos de parada
-          colors: [Colors.grey, Colors.white, Colors.white],
-        ),
+          //stops: [0.0, 0.25, 1.0], // Adiciona mais pontos de parada
+          colors: [Color.fromRGBO(25, 33, 38, 1),Color.fromRGBO(25, 33, 38, 0.8)],
+        ),*/
         boxShadow: [BoxShadow(color: ColorConstants.textBlack.withOpacity(0.12), blurRadius: 5.0, spreadRadius: 1.1)],
       ),
       child: Material(
@@ -52,7 +53,7 @@ class WorkoutCard extends StatelessWidget {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(top: 15.0), // Defina o valor da margem superior como desejar
-                            child: Text(recipes.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                            child: Text(recipes.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white), textAlign: TextAlign.center),
                           ),
                           const SizedBox(height: 3),
                           Text(recipes.exercices + " " + TextConstants.recipeUppercase,
