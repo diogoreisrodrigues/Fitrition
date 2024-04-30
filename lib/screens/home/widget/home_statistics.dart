@@ -28,7 +28,7 @@ class HomeStatistics extends StatelessWidget {
       width: screenWidth * 0.35,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: ColorConstants.white,
+        color: Color.fromRGBO(25, 33, 38, 1),
         boxShadow: [
           BoxShadow(
             color: ColorConstants.textBlack.withOpacity(0.12),
@@ -52,7 +52,7 @@ class HomeStatistics extends StatelessWidget {
                 child: Text(
                   TextConstants.finished,
                   style: TextStyle(
-                    color: ColorConstants.textBlack,
+                    color: ColorConstants.white,
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                   ),
@@ -67,7 +67,7 @@ class HomeStatistics extends StatelessWidget {
             style: TextStyle(
               fontSize: 48,
               fontWeight: FontWeight.w700,
-              color: ColorConstants.textBlack,
+              color: ColorConstants.white,
             ),
           ),
           Text(
@@ -127,7 +127,7 @@ class DataWorkouts extends StatelessWidget {
       width: screenWidth * 0.5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: ColorConstants.white,
+        color: Color.fromRGBO(25, 33, 38, 1),
         boxShadow: [
           BoxShadow(
             color: ColorConstants.textBlack.withOpacity(0.12),
@@ -148,7 +148,7 @@ class DataWorkouts extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: ColorConstants.textBlack,
+                  color: ColorConstants.white,
                 ),
               ),
             ],
@@ -160,7 +160,7 @@ class DataWorkouts extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
-                  color: ColorConstants.textBlack,
+                  color: ColorConstants.white,
                 ),
               ),
               const SizedBox(width: 10),
