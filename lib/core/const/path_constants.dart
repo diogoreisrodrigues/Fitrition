@@ -44,6 +44,7 @@ class PathConstants {
 
   // Start workout -> Yoga
   static const String recliningVideo = 'assets/videos/workouts/reclining.mp4';
+  static const String videoVideo = 'assets/videos/workouts/artress.mkv';
   static const String cowPoseVideo = 'assets/videos/workouts/cow.mp4';
   static const String warriorIIVideo = 'assets/videos/workouts/warriorII.mp4';
 }
