@@ -92,7 +92,7 @@ class ExerciseCell extends StatelessWidget {
     );
   }
 
-  Widget _createImage() {
+  Widget _createImage() { //imagem dos exercicios individuais
     return ClipRRect(
       borderRadius: BorderRadius.circular(5), // Ajuste o valor para o raio desejado
       child: Container(
@@ -100,7 +100,7 @@ class ExerciseCell extends StatelessWidget {
         height: 75,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(workout.image),
+            image: AssetImage(currentExercise.imagePath[0]),
             fit: BoxFit.cover,
           ),
         ),

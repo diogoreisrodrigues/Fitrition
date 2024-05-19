@@ -107,6 +107,8 @@ flutter:
     - assets/images/auth/
     - assets/images/home/
     - assets/images/exercises/
+    - assets/images/receitas/
+    - assets/images/exercises/workouts/
     - assets/icons/home/
     - assets/icons/workouts/
     - assets/icons/social_networks/

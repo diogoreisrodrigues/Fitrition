@@ -100,7 +100,7 @@ class ExerciseCell extends StatelessWidget {
         height: 75,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(workout.image),
+            image: AssetImage(currentExercise.imagePath[0]),
             fit: BoxFit.cover,
           ),
         ),

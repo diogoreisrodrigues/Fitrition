@@ -149,7 +149,7 @@ class StartRecipetContent extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                              image: AssetImage(exercise.imagePath[index]),
+                              image: AssetImage(exercise.imagePath[index + 1]),
                           )
                       ),
                     ),
@@ -189,7 +189,7 @@ class StartRecipetContent extends StatelessWidget {
   }
 
 
-  Widget _createVideo(BuildContext context) {
+  /*Widget _createVideo(BuildContext context) {
     final bloc = BlocProvider.of<StartWorkoutBloc>(context);
     return Container(
       height: 235,
@@ -203,6 +203,22 @@ class StartRecipetContent extends StatelessWidget {
         onPauseTapped: (time) {
           bloc.add(PauseTappedEvent(time: time));
         },
+      ),
+    );
+  }*/
+
+  Widget _createVideo(BuildContext context) {
+    final bloc = BlocProvider.of<StartWorkoutBloc>(context);
+    return Container(
+      height: 235,
+      width: double.infinity,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: ColorConstants.white),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(5),
+        child: Image.asset(
+          exercise.video, // Substitua por seu caminho de imagem
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
