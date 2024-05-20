@@ -66,10 +66,10 @@ class _SettingsTextFieldState extends State<SettingsTextField> {
       focusNode: focusNode,
       controller: widget.controller,
       obscureText: stateObscureText,
-      style: TextStyle(fontWeight: FontWeight.w600),
+      style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
       decoration: InputDecoration(
         hintText: widget.placeHolder,
-        hintStyle: TextStyle(color: ColorConstants.grey, fontSize: 16),
+        hintStyle: TextStyle(color: ColorConstants.errorColor, fontSize: 16),
         border: InputBorder.none,
         focusedBorder: InputBorder.none,
         enabledBorder: InputBorder.none,

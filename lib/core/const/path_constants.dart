@@ -6,6 +6,7 @@ class PathConstants {
 
   // Auth
   static const String eye = 'assets/images/auth/eye_icon.png';
+  static const String salad = 'assets/icons/home/salada.png';
 
   // Tabbar
   static const String home = 'assets/icons/home/home_icon.png';
@@ -31,7 +32,7 @@ class PathConstants {
   static const String recicling = 'assets/images/exercises/recicling.png';
 
   //Workouts
-  static const String yoga = 'assets/icons/workouts/yoga.png';
+  static const String yoga = 'assets/images/exercises/workouts/chest.jpg';
   static const String pilates = 'assets/icons/workouts/pilates.png';
   static const String fullBody = 'assets/icons/workouts/full_body.png';
   static const String stretching = 'assets/icons/workouts/stretching.png';
@@ -43,6 +44,7 @@ class PathConstants {
 
   // Start workout -> Yoga
   static const String recliningVideo = 'assets/videos/workouts/reclining.mp4';
+  static const String videoVideo = 'assets/videos/workouts/artress.mkv';
   static const String cowPoseVideo = 'assets/videos/workouts/cow.mp4';
   static const String warriorIIVideo = 'assets/videos/workouts/warriorII.mp4';
 }

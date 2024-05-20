@@ -30,7 +30,7 @@ class SettingsContainer extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
-          color: ColorConstants.white,
+          color: Color.fromRGBO(25, 33, 38, 1), // Alterado para preto
           boxShadow: [BoxShadow(color: ColorConstants.textBlack.withOpacity(0.12), blurRadius: 5.0, spreadRadius: 1.1)],
         ),
       ),

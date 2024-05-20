@@ -82,8 +82,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             Text(displayName, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             SizedBox(height: 15),
             SettingsContainer(
-              child: Text(TextConstants.reminder, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
-              withArrow: true,
+              child: Text(TextConstants.reminder, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Colors.white)),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => ReminderPage()));
               },
@@ -91,15 +90,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
             if (!kIsWeb)
               SettingsContainer(
                 child: Text(TextConstants.rateUsOn + '${Platform.isIOS ? 'App store' : 'Play market'}',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Colors.white)),
                 onTap: () {
                   return launch(Platform.isIOS ? 'https://www.apple.com/app-store/' : 'https://play.google.com/store');
                 },
               ),
             SettingsContainer(
-                onTap: () => launch('https://perpet.io/'), child: Text(TextConstants.terms, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500))),
+                onTap: () => launch('https://moodle.cee.uma.pt/2324/login/index.php'), child: Text(TextConstants.terms, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Colors.white))),
             SettingsContainer(
-                child: Text(TextConstants.signOut, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500)),
+                child: Text(TextConstants.signOut, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Colors.white)),
                 onTap: () {
                   AuthService.signOut();
                   Navigator.pushReplacement(
@@ -114,15 +113,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                    onPressed: () => launch('https://www.facebook.com/perpetio/'),
+                    onPressed: () => launch('https://www.facebook.com/escondidinhogym/'),
                     style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: Colors.white, elevation: 1),
                     child: Image.asset(PathConstants.facebook)),
                 TextButton(
-                    onPressed: () => launch('https://www.instagram.com/perpetio/'),
+                    onPressed: () => launch('https://www.instagram.com/davidfitness.pt/'),
                     style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: Colors.white, elevation: 1),
                     child: Image.asset(PathConstants.instagram)),
                 TextButton(
-                    onPressed: () => launch('https://twitter.com/perpetio'),
+                    onPressed: () => launch('https://twitter.com/davidfitness_pt'),
                     style: TextButton.styleFrom(shape: CircleBorder(), backgroundColor: Colors.white, elevation: 1),
                     child: Image.asset(PathConstants.twitter)),
               ],

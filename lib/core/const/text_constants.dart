@@ -44,6 +44,7 @@ class TextConstants {
   static const String homeIcon = "Home";
   static const String workoutsIcon = "Workouts";
   static const String settingsIcon = "Settings";
+  static const String NutritionIcon = "Nutrition";
 
   // Home screen
   static const String checkActivity = "Let's check your activity";
@@ -53,10 +54,11 @@ class TextConstants {
   static const String inProgress = "In progress";
   static const String workouts = "Workouts";
 
-  static const String timeSent = "Time sent";
+  static const String timeSent = "Time spent";
   static const String minutes = "Minutes";
 
   static const String discoverWorkouts = "Discover new workouts";
+  static const String discoverRecipes = "Discover new Recipes";
 
   static const String keepProgress = "Keep the progress!";
   static const String profileSuccessful = "You are more successful than 88% users.";
@@ -72,24 +74,49 @@ class TextConstants {
   static const String armsMinutes = "35";
 
   //Workout screen -> yoga card
-  static const String yogaTitle = "Yoga";
+  static const String yogaTitle = "Chest";
   static const String yogaExercises = "16";
   static const String yogaMinutes = "52";
 
   //Workout screen -> pilates card
-  static const String pilatesTitle = "Pilates";
+  static const String pilatesTitle = "Legs";
   static const String pilatesExercises = "20";
   static const String pilatesMinutes = "60";
 
   //Workout screen -> fullBody card
-  static const String fullBodyTitle = "Full body";
+  static const String fullBodyTitle = "Back";
   static const String fullBodyExercises = "14";
   static const String fullBodyMinutes = "48";
 
-  //Workout screen -> stretching card
-  static const String stretchingTitle = "Stretching";
-  static const String stretchingExercises = "8";
-  static const String stretchingMinutes = "35";
+
+  //-----------------------------------------
+
+  //Recipes screen -> stretching card
+  static const String Breakfast = "Breakfast";
+  static const String Breakfast1 = "8";
+  static const String Breakfast2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Lunch = "Lunch";
+  static const String Lunch1 = "8";
+  static const String Lunch2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Dinner = "Dinner";
+  static const String Dinner1 = "8";
+  static const String Dinner2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Snacks = "Snacks";
+  static const String Snacks1 = "8";
+  static const String Snacks2 = "35";
+
+  //Recipes screen -> stretching card
+  static const String Desserts = "Desserts";
+  static const String Desserts1 = "8";
+  static const String Desserts2 = "1-2";
+
+  //-----------------------------------------
 
   //Settings screen
   static const String joinUs = 'Join us in social media';
@@ -165,4 +192,10 @@ class TextConstants {
   static const passwordReset = 'Password Reset';
   static const sendActivationBuild = 'Send Activation Link';
   static const resetPasswordLinkWasSent = 'Reset password link was sent on your email.';
+
+  //-----------------------------------------
+  // Nutrition Details screen common
+  static const String recipe = "Recipes";
+  static const String recipeLowercase = "recipes";
+  static const String recipeUppercase = "Recipes";
 }

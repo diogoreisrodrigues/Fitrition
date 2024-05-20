@@ -28,7 +28,7 @@ class WorkoutDetailsPage extends StatelessWidget {
               floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               floatingActionButton: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: FitnessButton(
+                child: FitnessButton( //apagar para nao ter botao START
                   title: TextConstants.start,
                   onTap: () {
                     ExerciseData? exercise = workout.exerciseDataList.firstWhereOrNull((element) => element.progress < 1);

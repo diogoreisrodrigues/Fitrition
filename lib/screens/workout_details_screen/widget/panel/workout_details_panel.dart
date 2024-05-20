@@ -47,6 +47,8 @@ class WorkoutDetailsPanel extends StatelessWidget {
       child: Text(
         workout.title + "  " + TextConstants.workout,
         style: TextStyle(
+          //dark
+          color: Colors.white,
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),

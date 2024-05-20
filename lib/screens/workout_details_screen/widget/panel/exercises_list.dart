@@ -63,7 +63,9 @@ class ExerciseCell extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.only(left: 10, right: 25, top: 10, bottom: 10),
             decoration: BoxDecoration(
-              color: ColorConstants.white,
+              //color: ColorConstants.white,
+              //dark
+              color: Color.fromRGBO(116, 116, 116, 0.4),
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
@@ -90,15 +92,17 @@ class ExerciseCell extends StatelessWidget {
     );
   }
 
-  Widget _createImage() {
-    return Container(
-      width: 75,
-      height: 70,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        image: DecorationImage(
-          image: AssetImage(workout.image),
-          fit: BoxFit.contain,
+  Widget _createImage() { //imagem dos exercicios individuais
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(5), // Ajuste o valor para o raio desejado
+      child: Container(
+        width: 75,
+        height: 75,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(currentExercise.imagePath[0]),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
@@ -112,7 +116,7 @@ class ExerciseCell extends StatelessWidget {
         Text(
           currentExercise.title,
           style: TextStyle(
-            color: ColorConstants.textColor,
+            color: ColorConstants.white,
             fontSize: 16,
             fontWeight: FontWeight.w700,
           ),
@@ -120,7 +124,7 @@ class ExerciseCell extends StatelessWidget {
         Text(
           minutesStr,
           style: TextStyle(
-            color: ColorConstants.textBlack,
+            color: Color.fromRGBO(255, 255, 255, 0.5),
             fontSize: 14,
             fontWeight: FontWeight.w400,
           ),

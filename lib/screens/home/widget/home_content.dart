@@ -5,6 +5,7 @@ import 'package:fitness_flutter/core/const/path_constants.dart';
 import 'package:fitness_flutter/core/const/text_constants.dart';
 import 'package:fitness_flutter/screens/edit_account/edit_account_screen.dart';
 import 'package:fitness_flutter/screens/home/bloc/home_bloc.dart';
+import 'package:fitness_flutter/screens/home/widget/home_nutrition_card.dart';
 import 'package:fitness_flutter/screens/home/widget/home_statistics.dart';
 import 'package:fitness_flutter/screens/workout_details_screen/page/workout_details_page.dart';
 import 'package:flutter/material.dart';
@@ -37,8 +38,10 @@ class HomeContent extends StatelessWidget {
           HomeStatistics(),
           const SizedBox(height: 30),
           _createExercisesList(context),
-          const SizedBox(height: 25),
+          const SizedBox(height: 20),
           _createProgress(),
+          const SizedBox(height: 10),
+          _createRecipesList(context),
         ],
       ),
     );
@@ -88,6 +91,54 @@ class HomeContent extends StatelessWidget {
       ],
     );
   }
+
+
+  Widget _createRecipesList(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            TextConstants.discoverRecipes,
+            style: TextStyle(
+              color: ColorConstants.textBlack,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        const SizedBox(height: 15),
+        Container(
+          height: 160,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              const SizedBox(width: 20),
+              NutritionCard(
+                  color: ColorConstants.cardioColor,
+                  workout: DataConstants.homeWorkouts[0],
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => WorkoutDetailsPage(
+                        workout: DataConstants.workouts[0],
+                      )))),
+              const SizedBox(width: 15),
+              NutritionCard(
+                  color: ColorConstants.armsColor,
+                  workout: DataConstants.homeWorkouts[1],
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => WorkoutDetailsPage(
+                        workout: DataConstants.workouts[2],
+                      )))),
+              const SizedBox(width: 20),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+
 
   Widget _createProfileData(BuildContext context) {
     final User? user = FirebaseAuth.instance.currentUser;
@@ -153,10 +204,10 @@ class HomeContent extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 20),
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: ColorConstants.white,
+        color: Color.fromRGBO(25, 33, 38, 1),
         boxShadow: [
           BoxShadow(
             color: ColorConstants.textBlack.withOpacity(0.12),
@@ -182,6 +233,7 @@ class HomeContent extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
                 const SizedBox(height: 3),
@@ -189,6 +241,7 @@ class HomeContent extends StatelessWidget {
                   TextConstants.profileSuccessful,
                   style: TextStyle(
                     fontSize: 16,
+                    color: Colors.white54,
                   ),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,

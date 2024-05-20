@@ -24,6 +24,8 @@ class WorkoutDetailsContent extends StatelessWidget {
     return SlidingUpPanel(
       panel: WorkoutDetailsPanel(workout: workout),
       body: WorkoutDetailsBody(workout: workout),
+      //dark
+      color: Color.fromRGBO(25, 33, 38, 1),
       minHeight: MediaQuery.of(context).size.height * 0.65,
       maxHeight: MediaQuery.of(context).size.height * 0.87,
       isDraggable: true,
