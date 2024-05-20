@@ -20,6 +20,9 @@ class PathConstants {
   static const String timeSent = 'assets/icons/home/time.png';
   static const String cardio = 'assets/images/home/cardio.png';
   static const String arms = 'assets/images/home/arms.png';
+  static const String armWork = 'assets/images/home/3arm.png';
+  static const String cardiofood = 'assets/images/home/baking2.png';
+  static const String armsfood = 'assets/images/home/coocking.png';
   static const String progress = 'assets/icons/home/progress.png';
 
   // Workout Details
@@ -45,6 +48,7 @@ class PathConstants {
   // Start workout -> Yoga
   static const String recliningVideo = 'assets/videos/workouts/reclining.mp4';
   static const String videoVideo = 'assets/videos/workouts/artress.mkv';
+  static const String videoSupino = 'assets/videos/workouts/teste.mp4';
   static const String cowPoseVideo = 'assets/videos/workouts/cow.mp4';
   static const String warriorIIVideo = 'assets/videos/workouts/warriorII.mp4';
 }

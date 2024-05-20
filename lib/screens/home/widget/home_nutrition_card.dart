@@ -48,7 +48,7 @@ class NutritionCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      "${workout.exercices} yaya",
+                      "${workout.exercices} recipes",
                       style: TextStyle(
                         color: ColorConstants.white,
                         fontSize: 16,
@@ -57,7 +57,7 @@ class NutritionCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      "${workout.minutes} bebe",
+                      "${workout.minutes} minutes",
                       style: TextStyle(
                         color: ColorConstants.white,
                         fontSize: 16,

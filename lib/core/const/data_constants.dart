@@ -41,7 +41,7 @@ class DataConstants {
             imagePath: ['assets/images/exercises/workouts/bench-press.jpg',],
             name: [],
             amount: [],
-            video: PathConstants.videoVideo,
+            video: PathConstants.videoSupino,
             description: 'The bench press is a fundamental compound exercise targeting the pectoralis major, triceps, and anterior deltoids. Lying on a flat bench, you press a barbell upwards from your chest. It\'s essential for building chest strength and size, making it a staple in most strength training routines.',
             steps: [
               'Lie flat on a bench with your eyes directly under the barbell. Plant your feet firmly on the ground, about shoulder-width apart, ensuring your back maintains a natural arch.',
@@ -396,7 +396,7 @@ class DataConstants {
         minutes: TextConstants.armsMinutes,
         currentProgress: 1,
         progress: 20,
-        image: PathConstants.cardio,
+        image: PathConstants.armWork,
         exerciseDataList: [
           ExerciseData(
             title: TextConstants.reclining,
@@ -431,7 +431,94 @@ class DataConstants {
             description: TextConstants.warriorDescription,
             steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
           ),
-        ]),
+        ]
+    ),
+    WorkoutData(
+        title: 'Breakfast',
+        exercices: '3',
+        minutes: '8-12',
+        currentProgress: 1,
+        progress: 20,
+        image: PathConstants.cardiofood,
+        exerciseDataList: [
+          ExerciseData(
+            title: TextConstants.reclining,
+            minutes: TextConstants.recliningMinutes,
+            progress: 0.1,
+            imagePath: ['assets/icons/home/logoB.png'],
+            name: [],
+            amount: [],
+            video: PathConstants.recliningVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.cowPose,
+            minutes: TextConstants.cowPoseMinutes,
+            progress: 0.1,
+            imagePath: ['assets/icons/home/logoB.png'],
+            name: [],
+            amount: [],
+            video: PathConstants.cowPoseVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.warriorPose,
+            minutes: TextConstants.warriorPoseMinutes,
+            progress: 0.0,
+            imagePath: ['assets/icons/home/logoB.png'],
+            name: [],
+            amount: [],
+            video: PathConstants.warriorIIVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+        ]
+    ),
+    WorkoutData(
+        title: 'Dinner',
+        exercices: '2',
+        minutes: '9-14',
+        currentProgress: 1,
+        progress: 20,
+        image: PathConstants.armsfood,
+        exerciseDataList: [
+          ExerciseData(
+            title: TextConstants.reclining,
+            minutes: TextConstants.recliningMinutes,
+            progress: 0.1,
+            imagePath: ['assets/icons/home/logoB.png'],
+            name: [],
+            amount: [],
+            video: PathConstants.recliningVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.cowPose,
+            minutes: TextConstants.cowPoseMinutes,
+            progress: 0.1,
+            imagePath: ['assets/icons/home/logoB.png'],
+            name: [],
+            amount: [],
+            video: PathConstants.cowPoseVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+          ExerciseData(
+            title: TextConstants.warriorPose,
+            minutes: TextConstants.warriorPoseMinutes,
+            progress: 0.0,
+            imagePath: ['assets/icons/home/logoB.png'],
+            name: [],
+            amount: [],
+            video: PathConstants.warriorIIVideo,
+            description: TextConstants.warriorDescription,
+            steps: [TextConstants.warriorStep1, TextConstants.warriorStep2],
+          ),
+        ]
+    ),
   ];
 
   // Receitas

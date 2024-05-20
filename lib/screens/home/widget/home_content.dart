@@ -74,7 +74,7 @@ class HomeContent extends StatelessWidget {
                   workout: DataConstants.homeWorkouts[0],
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => WorkoutDetailsPage(
-                            workout: DataConstants.workouts[0],
+                            workout: DataConstants.workouts[4],
                           )))),
               const SizedBox(width: 15),
               WorkoutCard(
@@ -82,7 +82,7 @@ class HomeContent extends StatelessWidget {
                   workout: DataConstants.homeWorkouts[1],
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => WorkoutDetailsPage(
-                            workout: DataConstants.workouts[2],
+                            workout: DataConstants.workouts[3],
                           )))),
               const SizedBox(width: 20),
             ],
@@ -116,19 +116,19 @@ class HomeContent extends StatelessWidget {
             children: [
               const SizedBox(width: 20),
               NutritionCard(
-                  color: ColorConstants.cardioColor,
-                  workout: DataConstants.homeWorkouts[0],
+                  color: ColorConstants.armsColor,
+                  workout: DataConstants.homeWorkouts[2],
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => WorkoutDetailsPage(
-                        workout: DataConstants.workouts[0],
+                        workout: DataConstants.recipes[0],
                       )))),
               const SizedBox(width: 15),
               NutritionCard(
-                  color: ColorConstants.armsColor,
-                  workout: DataConstants.homeWorkouts[1],
+                  color: ColorConstants.cardioColor,
+                  workout: DataConstants.homeWorkouts[3],
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => WorkoutDetailsPage(
-                        workout: DataConstants.workouts[2],
+                        workout: DataConstants.recipes[3],
                       )))),
               const SizedBox(width: 20),
             ],
