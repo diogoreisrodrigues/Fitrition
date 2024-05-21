@@ -8,6 +8,7 @@ import 'package:fitness_flutter/screens/home/bloc/home_bloc.dart';
 import 'package:fitness_flutter/screens/home/widget/home_nutrition_card.dart';
 import 'package:fitness_flutter/screens/home/widget/home_statistics.dart';
 import 'package:fitness_flutter/screens/workout_details_screen/page/workout_details_page.dart';
+import 'package:fitness_flutter/screens/Nutrition_details_screen/Page/nutrition_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -119,16 +120,16 @@ class HomeContent extends StatelessWidget {
                   color: ColorConstants.armsColor,
                   workout: DataConstants.homeWorkouts[2],
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => WorkoutDetailsPage(
-                        workout: DataConstants.recipes[0],
+                      builder: (_) => NutritionDetaisPage(
+                        recipes: DataConstants.recipes[0],
                       )))),
               const SizedBox(width: 15),
               NutritionCard(
                   color: ColorConstants.cardioColor,
                   workout: DataConstants.homeWorkouts[3],
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => WorkoutDetailsPage(
-                        workout: DataConstants.recipes[3],
+                      builder: (_) => NutritionDetaisPage(
+                        recipes: DataConstants.recipes[3],
                       )))),
               const SizedBox(width: 20),
             ],
