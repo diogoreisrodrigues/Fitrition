@@ -86,7 +86,7 @@ class TextConstants {
   //Workout screen -> fullBody card
   static const String fullBodyTitle = "Back";
   static const String fullBodyExercises = "2";
-  static const String fullBodyMinutes = "48";
+  static const String fullBodyMinutes = "45";
 
 
   //-----------------------------------------
