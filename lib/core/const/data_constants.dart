@@ -58,7 +58,7 @@ class DataConstants {
             imagePath: ['assets/images/exercises/workouts/push-ups.jpg',],
             name: [],
             amount: [],
-            video: PathConstants.cowPoseVideo,
+            video: PathConstants.videoPush,
             description: 'Push-ups are a bodyweight exercise that targets the chest, triceps, and shoulders. Starting in a plank position, you lower your body until your chest nearly touches the floor, then push back up. They are excellent for building upper body strength and core stability, and can be done anywhere without equipment.',
             steps: [
               'Begin in a high plank position with your hands placed slightly wider than shoulder-width apart, fingers pointing forward. Your body should form a straight line from your head to your heels.',
@@ -73,7 +73,7 @@ class DataConstants {
             imagePath: ['assets/images/exercises/workouts/incline-dumbbell-bench-press.jpg'],
             name: [],
             amount: [],
-            video: PathConstants.warriorIIVideo,
+            video: PathConstants.videoIncline,
             description: 'The incline dumbbell press targets the upper chest, triceps, and shoulders. Performed on a bench set to a 30-45 degree incline, you press dumbbells upwards from your chest. This exercise enhances upper chest development and promotes balanced muscle growth.',
             steps: [
               'Adjust an adjustable bench to a 30-45 degree incline. Sit on the bench and rest a dumbbell on each thigh.',

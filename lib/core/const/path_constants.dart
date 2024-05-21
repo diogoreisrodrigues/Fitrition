@@ -49,6 +49,8 @@ class PathConstants {
   static const String recliningVideo = 'assets/videos/workouts/reclining.mp4';
   static const String videoVideo = 'assets/videos/workouts/artress.mkv';
   static const String videoSupino = 'assets/videos/workouts/teste.mp4';
+  static const String videoPush = 'assets/videos/workouts/push.mp4';
+  static const String videoIncline = 'assets/videos/workouts/incline.mp4';
   static const String cowPoseVideo = 'assets/videos/workouts/cow.mp4';
   static const String warriorIIVideo = 'assets/videos/workouts/warriorII.mp4';
 }
