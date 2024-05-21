@@ -7,7 +7,7 @@ class TextConstants {
   static const String onboarding2Title = "Learn techniques";
   static const String onboarding3Title = "Stay strong & healthy";
 
-  static const String onboarding1Description = "You can do your workout at home without any equipment, outside or at the gym.";
+  static const String onboarding1Description = "Transform your potential into progress. Your journey to strength and wellness begins here at the gym.";
   static const String onboarding2Description = "Our workout programs are made by professionals.";
   static const String onboarding3Description = "We want you to fully enjoy the program and stay healthy and positive.";
 
@@ -65,27 +65,27 @@ class TextConstants {
 
   // Home screen -> cardio card
   static const String cardioTitle = "Cardio";
-  static const String cardioExercises = "10";
+  static const String cardioExercises = "3";
   static const String cardioMinutes = "50";
 
   // Home screen -> arms card
   static const String armsTitle = "Arms";
-  static const String armsExercises = "6";
+  static const String armsExercises = "4";
   static const String armsMinutes = "35";
 
   //Workout screen -> yoga card
   static const String yogaTitle = "Chest";
-  static const String yogaExercises = "16";
+  static const String yogaExercises = "3";
   static const String yogaMinutes = "52";
 
   //Workout screen -> pilates card
   static const String pilatesTitle = "Legs";
-  static const String pilatesExercises = "20";
+  static const String pilatesExercises = "4";
   static const String pilatesMinutes = "60";
 
   //Workout screen -> fullBody card
   static const String fullBodyTitle = "Back";
-  static const String fullBodyExercises = "14";
+  static const String fullBodyExercises = "2";
   static const String fullBodyMinutes = "48";
 
 
@@ -93,28 +93,28 @@ class TextConstants {
 
   //Recipes screen -> stretching card
   static const String Breakfast = "Breakfast";
-  static const String Breakfast1 = "8";
-  static const String Breakfast2 = "35";
+  static const String Breakfast1 = "3";
+  static const String Breakfast2 = "5-15";
 
   //Recipes screen -> stretching card
   static const String Lunch = "Lunch";
-  static const String Lunch1 = "8";
-  static const String Lunch2 = "35";
+  static const String Lunch1 = "2";
+  static const String Lunch2 = "10-20";
 
   //Recipes screen -> stretching card
   static const String Dinner = "Dinner";
-  static const String Dinner1 = "8";
-  static const String Dinner2 = "35";
+  static const String Dinner1 = "2";
+  static const String Dinner2 = "20-30";
 
   //Recipes screen -> stretching card
   static const String Snacks = "Snacks";
-  static const String Snacks1 = "8";
-  static const String Snacks2 = "35";
+  static const String Snacks1 = "3";
+  static const String Snacks2 = "10-60";
 
   //Recipes screen -> stretching card
   static const String Desserts = "Desserts";
-  static const String Desserts1 = "8";
-  static const String Desserts2 = "1-2";
+  static const String Desserts1 = "2";
+  static const String Desserts2 = "10-20";
 
   //-----------------------------------------
 
